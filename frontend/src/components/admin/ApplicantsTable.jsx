@@ -15,7 +15,7 @@ const ApplicantsTable = () => {
     const statusHandler = async (status, id) => {
         try {
             axios.defaults.withCredentials = true;
-            const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`, {status}, {
+            const res = await axios.post(`https://freelance-workplace.onrender.com/api/v1/application/status/${id}/update`, {status}, {
                 withCredentials:true
             });
             if(res.data.success){

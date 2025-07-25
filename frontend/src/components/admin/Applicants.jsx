@@ -15,7 +15,7 @@ const Applicants = () => {
     useEffect(() => {
         const fetchAllApplicants = async () => {
             try {
-                const res = await axios.get(`${APPLICATION_API_END_POINT}/${params.id}/applicants`, { withCredentials: true });
+                const res = await axios.get(`https://freelance-workplace.onrender.com/api/v1/api/v1/application/${id}/applicants`, { withCredentials: true });
                 dispatch(setAllApplicants(res.data.job));
             } catch (error) {
                 console.error("Failed to fetch applicants:", error);

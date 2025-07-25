@@ -11,7 +11,7 @@ const useGetAllAppliedJobs = () => {
     useEffect(() => {
         const fetchAppliedJobs = async () => {
             try {
-                const res = await axios.get(`${APPLICATION_API_END_POINT}/get`, {withCredentials:true});
+                const res = await axios.get(`https://freelance-workplace.onrender.com/api/v1/application/get`, {withCredentials:true});
                 if(res.data.success){
                     dispatch(setAppliedJobs(res.data.application));
                 }
