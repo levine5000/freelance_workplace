@@ -2,13 +2,12 @@ import React, { useEffect } from 'react';
 import Navbar from '../shared/Navbar';
 import ApplicantsTable from './ApplicantsTable';
 import { useParams } from 'react-router-dom';
-import { APPLICATION_API_END_POINT } from '@/utils/constant';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAllApplicants } from '@/redux/applicationSlice';
 import axios from 'axios';
 
 const Applicants = () => {
-    const params = useParams();
+    const { id } = useParams();
     const dispatch = useDispatch();
     const { applicants } = useSelector(store => store.application);
 
@@ -23,7 +22,7 @@ const Applicants = () => {
         };
 
         fetchAllApplicants();
-    }, [params.id, dispatch]);
+    }, [id, dispatch]);
 
     return (
         <div className="min-h-screen bg-gray-50">
