@@ -5,8 +5,8 @@ import ProtectedRoute from './components/admin/ProtectedRoute'
 
 // Lazy imports
 const Home = lazy(() => import('./components/Home'))
-const Login = lazy(() => import('./components/auth/login'))
-const Signup = lazy(() => import('./components/auth/signup'))
+const Login = lazy(() => import('./components/auth/Login'))
+const Signup = lazy(() => import('./components/auth/Signup'))
 const Jobs = lazy(() => import('./components/Jobs'))
 const Browse = lazy(() => import('./components/Browse'))
 const Profile = lazy(() => import('./components/Profile'))
