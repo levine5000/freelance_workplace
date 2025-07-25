@@ -20,8 +20,9 @@ const Applicants = () => {
                 console.error("Failed to fetch applicants:", error);
             }
         };
-
+        if(id){
         fetchAllApplicants();
+        }
     }, [id, dispatch]);
 
     return (
